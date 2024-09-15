@@ -1,13 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/header/Header';
+import Banner from './components/banner/Banner';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Portfolio</h1>
-      </header>
+    <div className="app">
+      <Header />
+
+      <main>
+        <Banner />
+      </main>
     </div>
   );
 }
