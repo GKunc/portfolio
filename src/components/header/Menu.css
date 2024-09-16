@@ -1,0 +1,8 @@
+.menuOpened {
+    background-color: var(--font-color);
+    fill: black;
+}
+
+.menu {
+    color: var(--font-color);
+}
