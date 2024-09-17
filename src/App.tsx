@@ -9,26 +9,26 @@ function App() {
   
   const nextSlide = () => {
     (sectionRef1.current as any)?.classList.add('hidden');
+    (sectionRef1.current as any)?.classList.remove('visible');
     (sectionRef2.current as any)?.classList.add('visible');
+    (sectionRef2.current as any)?.classList.remove('hidden');
   }
 
-  // useEffect(() => {
-  //   window.removeEventListener('click', nextSlide);
-  //   window.addEventListener('click', nextSlide);
-
-  //   return () => window.removeEventListener('click', nextSlide);
-  // }, [sectionRef1]);
+  useEffect(() => {
+    window.addEventListener('wheel', nextSlide);
+    return () => window.removeEventListener('wheel', nextSlide);
+  }, []);
 
   return (
       <div className="app">
         <Header />
 
         <main onClick={nextSlide} ref={sectionRef1}>
-          <Banner title={'Hello there!'}/>
+          <Banner title={'Hello there!'} content={'Im first content'}/>
         </main>
 
         <main ref={sectionRef2} className='hidden'>
-          <Banner title={'Next'}/>
+          <Banner title={'Next'} content={'Some more text here.'}/>
         </main>
       </div>
   );

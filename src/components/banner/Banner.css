@@ -2,7 +2,6 @@
     width: 100%;
     border-radius: var(--border-radius);
     border: 8px solid var(--border-color);
-    background-color: var(--border-color);
 }
 
 .banner__title {
@@ -15,8 +14,8 @@
 }
 
 .banner__content {
-    background-color: var(--background-color);
-    height: calc(100% - 200px);
+    background-color: transparent;
+    height: calc(100% - 216px);
     border-radius: 4px;
     position: relative;
     color: var(--font-color);
@@ -27,6 +26,24 @@
     align-items: center;
     gap: 24px;
 }
+
+.content_animation {
+    position: absolute;
+    left: 8px;
+    right: 8px;
+    top: 8px;
+    animation-name: fly;
+    animation-duration: 2s;
+  }
+  
+  @keyframes fly {
+    from {
+        left: -1000px;
+    }
+    to {
+        left: 8px;
+    }
+  }
 
 .banner__content--bottom {
     position: absolute;

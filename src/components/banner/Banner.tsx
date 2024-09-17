@@ -1,14 +1,15 @@
 import './Banner.css';
 
-function Banner({title}: {title: string}) {
+function Banner({title, content}: {title: string, content: string}) {
   return (
     <div className='banner'>
-        <div className='banner__content'>
+        <div className='banner__content content_animation'>
             <div className='banner__title'>{title}</div>
             <div>
                 <div className='banner__description'>Do you want to get more information?</div>
                 <div className='banner__description'>Contact us and give as some details</div>
                 <div className='banner__description'>We will respond as soon as possible!</div>
+                <div className='banner__description'>{content}</div>
             </div>
             <div>
                 <button  className='header__cta'>Contact Us</button>
