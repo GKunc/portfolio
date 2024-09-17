@@ -39,13 +39,46 @@
     border-radius: var(--border-radius);
 }
 
+.banner__content--statistics {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    text-align: center;
+}
+
+.banner__content--big {
+    font-size: 32px;
+}
+
 .banner__content--bottom-inner {
     width: calc(100% - 16px);
     height: calc(100% - 16px);
     margin: 8px;
     border-radius: 4px;
     background-color: var(--background-color);
+    color: var(--font-color);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
+
+.header__cta {
+    width: var(--header-section-width);
+    color: var(--font-color);
+    font-size: 16px;
+    background-color: black;
+    border-radius: 6px;
+    padding: 12px;
+    border: 2px solid var(--border-color);
+  }
+  
+  .header__cta:hover {
+    cursor: pointer;
+    color: var(--font-color);
+    text-decoration: underline;
+  }
 
 @media (max-width:961px) {
     .banner__title {
