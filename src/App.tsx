@@ -1,7 +1,8 @@
 import './App.css';
 import Header from './components/header/Header';
-import Banner from './components/banner/Banner';
+import HomePage from './components/pages/home/HomePage';
 import { useEffect, useRef } from 'react';
+import ProjectsPage from './components/pages/projects/ProjectsPage';
 
 function App() {
   const sectionRef1 = useRef(null);
@@ -24,11 +25,11 @@ function App() {
         <Header />
 
         <main onClick={nextSlide} ref={sectionRef1}>
-          <Banner title={'Hello there!'} content={'Im first content'}/>
+          <HomePage />
         </main>
 
         <main ref={sectionRef2} className='hidden'>
-          <Banner title={'Next'} content={'Some more text here.'}/>
+          <ProjectsPage />
         </main>
       </div>
   );

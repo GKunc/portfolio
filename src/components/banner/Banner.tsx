@@ -1,21 +1,13 @@
+import { ReactNode } from 'react';
 import './Banner.css';
 
-function Banner({title, content}: {title: string, content: string}) {
+function Banner({ children }: { children: ReactNode }) {
   return (
     <div className='banner'>
         <div className='banner__content content_animation'>
-            <div className='banner__title'>{title}</div>
-            <div>
-                <div className='banner__description'>Do you want to get more information?</div>
-                <div className='banner__description'>Contact us and give as some details</div>
-                <div className='banner__description'>We will respond as soon as possible!</div>
-                <div className='banner__description'>{content}</div>
-            </div>
-            <div>
-                <button  className='header__cta'>Contact Us</button>
-            </div>
+            {children}
         </div>
-        <div className='banner__content--bottom'>
+        {/* <div className='banner__content--bottom'>
                 <div className='banner__content--bottom-inner'>
                   <div className='banner__content--statistics'>
                     <div className='banner__content--big'>5</div> Years 
@@ -27,7 +19,7 @@ function Banner({title, content}: {title: string, content: string}) {
                     <div className='banner__content--big'>24/7</div> Support
                   </div>
                 </div>
-            </div>
+            </div> */}
     </div>
   );
 }

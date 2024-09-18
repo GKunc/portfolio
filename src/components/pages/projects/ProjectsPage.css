@@ -1,0 +1,50 @@
+.projects {
+    display: flex;
+    height: 100%;
+    gap: 24px;
+}
+
+.projects__card {
+    width: 300px;
+    height: 100%;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.projects__card--info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.projects__card--preview {
+    background-image: url('https://gratisography.com/wp-content/uploads/2024/03/gratisography-vr-glasses-1170x780.jpg');
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+}
+
+.projects__card--title {
+    font-size: 24px;    
+}
+
+.projects__card--description {
+    font-size: 16px;
+}
+
+@media (max-width:961px) {
+    .projects__card:not(:first-child) {
+        display: none;
+    }
+}
