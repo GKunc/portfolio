@@ -43,8 +43,32 @@
     font-size: 16px;
 }
 
+.arrow {
+    display: none;
+}
+
 @media (max-width:961px) {
-    .projects__card:not(:first-child) {
+    .projects__card {
         display: none;
+    }
+
+    .projects__card--show {
+        display: block;
+    }
+
+    .arrow {
+        display: block;
+        position: absolute;
+        top: 50%;
+    }
+
+    .arrow--right {
+        right: 0;
+        transform: translateY(-50%) rotate(90deg);
+    }
+
+    .arrow--left {
+        left: 0;
+        transform: translateY(-50%) rotate(-90deg);
     }
 }

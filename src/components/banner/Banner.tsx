@@ -2,6 +2,7 @@ import { ReactNode } from 'react';
 import './Banner.css';
 
 function Banner({ children }: { children: ReactNode }) {
+
   return (
     <div className='banner'>
         <div className='banner__content content_animation'>
