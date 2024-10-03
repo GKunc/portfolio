@@ -17,14 +17,14 @@ button {
 #root {
   display: flex;
   justify-content: center;
-  background-color: #121212;
+  background-color: var(--background-color);
 }
 
 :root {
-  --background-color: #1c1b1d;
+  --background-color: #121212;
   --border-color: #e6e1e3;
   --font-color: #e6e1e3;
-  --border-radius: 8px;
+  --border-radius: 2px;
   --max-width: 1000px;
   --header-section-with: 170px;
 }

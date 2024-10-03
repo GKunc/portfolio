@@ -1,8 +1,8 @@
 .header {
   max-width: var(--max-width);
-  position: absolute;
+  position: sticky;
   z-index: 10;
-  top: 8px;
+  top: 0;
   left: 0;
   right: 0;
   height: 40px;
@@ -12,6 +12,7 @@
   justify-content: space-between;
   gap: 16px;
   border-bottom: 1px solid var(--border-color);
+  background-color: var(--background-color);
 }
 
 .header__mobile {
@@ -70,7 +71,7 @@
 .header__media--button {
   color: var(--font-color);
   background-color: transparent;
-  border: none; 
+  border: none;
 }
 
 .header__media--button:hover {
@@ -103,7 +104,7 @@
   background-color: var(--background-color);
 }
 
-@media (max-width:961px) {
+@media (max-width: 961px) {
   .header {
     display: none;
   }
